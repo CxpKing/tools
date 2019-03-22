@@ -10,3 +10,4 @@
 10.[OA_WTWD](http://oa.fortuneship.com:8888/login.jsp)  
 11.[codingground](https://www.tutorialspoint.com/codingground.htm)  
 12.[gif动态图制作](https://jingyan.baidu.com/article/f0e83a256926f122e4910179.html)  
+13.[linux与windows下的编译文件](https://www.cnblogs.com/ziyunlong/p/6023121.html)
