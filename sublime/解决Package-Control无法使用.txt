@@ -1,0 +1,50 @@
+1、下载本库下的Package-Control.Channel_v3.zip
+2、解压后有两个文件
+	1、Package Control.sublime-package 
+		该文件需要放在路径：C:\Users\xxxxx\AppData\Roaming\Sublime Text 3\Installed Packages\
+	2、channel_v3.json
+		该文件可以放在sublime的安装目录下：D:\Program Files\Sublime Text 3\
+3、配置文件路径
+	打开Preferences->Package Setting->Package Control ->Setting User 中添加下列配置
+	
+	"channels":
+    [
+        "D:\\Program Files\\Sublime Text 3\\channel_v3.json"
+    ],
+
+    再在当前文件下的installed_packages中添加
+    "installed_packages":
+    [
+    	"Package Control",
+    ]
+
+最终的文件如下：
+{
+	"bootstrapped": true,
+	"channels":
+	[
+		"D:\\Program Files\\Sublime Text 3\\channel_v3.json"
+	],
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"All Autocomplete",
+		"AutoFileName",
+		"Autoprefixer",
+		"BracketHighlighter",
+		"Color Highlighter",
+		"DocBlockr",
+		"DocBlockr_Python",
+		"Emmet",
+		"JavaScript Completions",
+		"JsFormat",
+		"MarkdownEditing",
+		"Package Control",
+		"Pylinter",
+		"Python Completions",
+		"SideBarEnhancements",
+		"TXT2PYNB"
+	]
+}
