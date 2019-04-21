@@ -1,3 +1,11 @@
 1、ColorPicker
 	功能：调色板（需要输入颜色时，可直接选取颜色）
 	使用：快捷键Windows: ctrl+shift+c
+
+2、pylint
+	功能：python语法提示工具
+	注意：当使用时会会出现一个黄色的标记，一个黄色圈圈将文件内容包裹起来，想要去掉它
+		  打开preferences->packages-settings->pylinter->settings-user,填上：
+		  {
+			"disable_outline": true,
+		  }
