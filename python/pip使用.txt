@@ -1,0 +1,84 @@
+一、pip安装某个模块时指定国内镜像
+1、临时使用法：
+	pip install  -i  国内镜像文件
+					http://pypi.douban.com/simple/ 豆瓣
+					http://mirrors.aliyun.com/pypi/simple/ 阿里
+					http://pypi.hustunique.com/simple/ 华中理工大学
+					http://pypi.sdutlinux.org/simple/ 山东理工大学
+					http://pypi.mirrors.ustc.edu.cn/simple/ 中国科学技术大学
+					https://pypi.tuna.tsinghua.edu.cn/simple 清华
+2、配置为默认
+
+   配制成默认的，修改默认文件：pip.ini
+
+　　[global]  
+
+　　index-url=http://mirrors.aliyun.com/pypi/simple/  
+
+　　[install]  
+
+　　trusted-host=mirrors.aliyun.com  
+
+3、将已安装的python包包名以及版本重定向到一个文本文件
+	
+	1
+		pip list > f:\1.txt 		生成格式如下
+		
+		Package      Version
+		------------ -------
+		Click        7.0    
+		Django       2.2    
+		Flask        1.0.2  
+		flask-apidoc 1.2.0  
+		itsdangerous 1.1.0  
+		Jinja2       2.10.1 
+		MarkupSafe   1.1.1  
+		pip          19.0.3 
+		pytz         2019.1 
+		setuptools   40.8.0 
+		sqlparse     0.3.0  
+		Werkzeug     0.15.2
+
+	2
+		pip freeze > 2.txt		生成格式如下
+
+		Click==7.0
+		Django==2.2
+		Flask==1.0.2
+		flask-apidoc==1.2.0
+		itsdangerous==1.1.0
+		Jinja2==2.10.1
+		MarkupSafe==1.1.1
+		pytz==2019.1
+		sqlparse==0.3.0
+		Werkzeug==0.15.2
+	为什么freeze出来的包比list出来的少几个，因为pip , wheel , setuptools 等包，是自带的而无法(un)install的。
+	所以freeze一般都是用来导出手动安装的包，供该项目在其他机器上运行时，
+	使用pip install -r requirements.txt,快速安装环境依赖。
+
+	而文件requirement.txt里面内容的格式和pip freeze的格式完全一样。因此我们可以将pip freeze的内容输出至requirements.txt。其他机器可以根据导出的requirements.txt进行包安装。
+
+	pip freeze | tee requirements.txt # linux输出本地包环境至文件
+	pip freeze > requirments.txt      #windows
+	pip install -r requirements.txt # 根据文件进行包安装
+
+
+3、pip install -U -r ....
+	-U : 当安装的包存在时对其进行升级
+	-r : 当
+
+4、查看可升级的包
+	pip list o
+
+6、搜索包
+	pip search package
+
+7、升级指定的包
+	pip install -U SomePackage
+
+8、查看安装的某个包信息
+	pip show -f SomePackage
+
+9、卸载包
+	pip uninstall packae
+	pip uninstall -r requirements.txt

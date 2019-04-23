@@ -1,0 +1,5 @@
+tools=`pwd`
+echo -e "\033[35m now in "$tools" \033[0m"
+git reset --hard
+git clean -xdf
+git pull
