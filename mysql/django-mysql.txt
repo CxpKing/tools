@@ -1,0 +1,12 @@
+一、使用django后台admin往models.py数据表中添加数据报错处理
+	UnicodeDecodeError: 'gbk' codec can't decode byte 0xa6 in position 9737: illegal multibyte sequence
+	当插入中文数据时报上述错误，解决办法修改mysql数据库的编码格式修改my.ini：
+	1、查看编码字符集：
+		show variables like "%character%";
+		修改my.ini文件
+		[client]
+		default-character-set=utf8
+		[mysql]
+		default-character-set=utf8
+		[mysqld]
+		character_set_server=utf8
