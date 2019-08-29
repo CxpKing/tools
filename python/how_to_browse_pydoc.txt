@@ -1,0 +1,5 @@
+1、命令行输入：
+	python -m pydoc -p 4567
+	4567指的是端口号
+2、在浏览器中输入地址即可查看安装在本地的python文档
+	http://localhost:4567/
