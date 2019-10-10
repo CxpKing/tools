@@ -1,0 +1,3 @@
+情景1：git status时，如果文件或文件夹名称是中文的可能会出现乱码情况
+	解决办法，运行命令
+	git config --global core.quotepath false

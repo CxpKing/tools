@@ -126,3 +126,9 @@
 				ul>.class :默认为li
 				table>.row>.col :默认为tr td
 				
+
+4、SideBarEnhancements
+	功能：侧边栏功能增强插件，可以增强侧边栏单击右键的菜单功能
+
+5、a file icon
+	功能：侧边栏的文件及文件夹图标美化插件
